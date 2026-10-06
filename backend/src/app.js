@@ -91,7 +91,7 @@ app.use((error, req, res, next) => {
     if (error.code === "LIMIT_FILE_COUNT") {
       return res.status(400).json({
         success: false,
-        message: "Only one image can be uploaded at a time",
+        message: "Too many images uploaded",
       });
     }
 
